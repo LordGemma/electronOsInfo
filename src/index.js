@@ -12,10 +12,10 @@ const createWindow = () => {
     width: 900,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,
+      // nodeIntegration: true,
       contextIsolation: true,
       preload: path.join(__dirname, './preload.js'),
-      sandbox: true,
+      // sandbox: true,
     }
   });
 
