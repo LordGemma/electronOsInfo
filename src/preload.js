@@ -13,10 +13,7 @@ contextBridge.exposeInMainWorld(
         get(channel, func) {
             let validChannels = ["get"];
             if (validChannels.includes(channel)) {
-                ipcRenderer.on(channel, (event, ...args) => {
-                    console.log(event, args);
-                    return func(...args);
-                })
+                ipcRenderer.on(channel, (event, ...args) => func(...args))
             }
         }
     }
